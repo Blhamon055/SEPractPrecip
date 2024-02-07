@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpy1n572imbhg"]
+
+[ext_resource type="Script" path="res://button.gd" id="1_k8bak"]
+[ext_resource type="Texture2D" uid="uid://cx03ftslx6ftd" path="res://redButton.png" id="2_3tfyy"]
+[ext_resource type="Texture2D" uid="uid://dc4ps0l0ky7v" path="res://greenButton.png" id="3_3lo7u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xxwcc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3tfyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3lo7u")
+}],
+"loop": true,
+"name": &"Pressed",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4bmmd"]
+radius = 526.78
+
+[node name="button" type="Area2D"]
+scale = Vector2(0.08, 0.08)
+script = ExtResource("1_k8bak")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xxwcc")
+animation = &"Pressed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4bmmd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
