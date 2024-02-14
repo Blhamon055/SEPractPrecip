@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://bhqja1j74crl5"]
+[gd_scene load_steps=14 format=3 uid="uid://bhqja1j74crl5"]
 
 [ext_resource type="Texture2D" uid="uid://bgdqdv2pqkgv" path="res://Assets/Legacy_Adventure_Pack/Assets/Assets.png" id="1_aajq6"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_3xli8"]
-[ext_resource type="Texture2D" uid="uid://csjna0dpqtb4d" path="res://icon.svg" id="2_lqdgq"]
+[ext_resource type="Texture2D" uid="uid://dsj5sxmrat1up" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Chacter with outline/sprites/jump outline.png" id="4_ju3u1"]
+[ext_resource type="Texture2D" uid="uid://bce8pstp7gkwf" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Chacter with outline/sprites/landing outline.png" id="5_3pn5o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vu3fi"]
 texture = ExtResource("1_aajq6")
@@ -3061,6 +3062,20 @@ sources/0 = SubResource("TileSetAtlasSource_n8t5u")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2h8qf"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_d82c5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ju3u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3pn5o")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Background" type="TileMap" parent="."]
@@ -3090,7 +3105,11 @@ shape = SubResource("RectangleShape2D_2h8qf")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_lqdgq")
+texture = ExtResource("4_ju3u1")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(5, 5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_d82c5")
+animation = &"Walk"
