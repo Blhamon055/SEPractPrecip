@@ -8,10 +8,10 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
+
+"""
 func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta
+	velocity.y += gravity * delta
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -27,7 +27,21 @@ func _physics_process(delta):
 
 	get_input()
 	move_and_slide()
-
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * SPEED
+"""
+
+func _physics_process(delta):
+	# Add the gravity.
+	velocity.y += gravity * delta
+
+	# Handle Jump.
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = SPEED
+
+	# Get the input direction.
+	var direction = Input.get_axis("ui_left", "ui_right")
+	velocity.x = direction * SPEED
+
+	move_and_slide()
