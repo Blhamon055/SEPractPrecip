@@ -3108,7 +3108,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_ju3u1")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-zoom = Vector2(5, 5)
+zoom = Vector2(2.5, 2.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_d82c5")
