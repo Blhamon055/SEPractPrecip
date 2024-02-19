@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c31v6x1l0gyjn"]
+[gd_scene load_steps=5 format=3 uid="uid://cu5gcg5x86hkf"]
 
 [ext_resource type="Texture2D" uid="uid://caj05cpjgwemx" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/jump.png" id="1_x8ee2"]
 [ext_resource type="Texture2D" uid="uid://cd3b517w8kdss" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/landing.png" id="2_5quml"]

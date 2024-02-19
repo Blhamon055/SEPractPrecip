@@ -20,6 +20,13 @@ config/icon="res://icon.svg"
 window/size/viewport_width=576
 window/size/viewport_height=324
 
+[input]
+
+click={
+"deadzone": 0.5,
+"events": []
+}
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
