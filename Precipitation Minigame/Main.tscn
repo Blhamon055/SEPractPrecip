@@ -3110,6 +3110,7 @@ texture = ExtResource("4_ju3u1")
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(3.5, 3.5)
 limit_left = -128
+limit_bottom = 174
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_d82c5")
