@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_3xli8"]
 [ext_resource type="Texture2D" uid="uid://dsj5sxmrat1up" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Chacter with outline/sprites/jump outline.png" id="4_ju3u1"]
 [ext_resource type="Texture2D" uid="uid://bce8pstp7gkwf" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Chacter with outline/sprites/landing outline.png" id="5_3pn5o"]
-[ext_resource type="PackedScene" uid="uid://bb5illnlkk5id" path="res://hud.tscn" id="5_34rhp"]
+[ext_resource type="PackedScene" path="res://hud.tscn" id="5_34rhp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vu3fi"]
 texture = ExtResource("1_aajq6")
