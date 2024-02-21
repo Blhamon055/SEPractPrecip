@@ -1,10 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://bhqja1j74crl5"]
+[gd_scene load_steps=19 format=3 uid="uid://bhqja1j74crl5"]
 
 [ext_resource type="Texture2D" uid="uid://bgdqdv2pqkgv" path="res://Assets/Legacy_Adventure_Pack/Assets/Assets.png" id="1_aajq6"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_3xli8"]
+[ext_resource type="Texture2D" uid="uid://cb6r7rb2ic7vg" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/landingF.png" id="4_614ld"]
 [ext_resource type="Texture2D" uid="uid://dsj5sxmrat1up" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Chacter with outline/sprites/jump outline.png" id="4_ju3u1"]
-[ext_resource type="Texture2D" uid="uid://bce8pstp7gkwf" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Chacter with outline/sprites/landing outline.png" id="5_3pn5o"]
 [ext_resource type="PackedScene" path="res://hud.tscn" id="5_34rhp"]
+[ext_resource type="Texture2D" uid="uid://dm5mc647uiwu0" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/idle.png" id="5_m1vsr"]
+[ext_resource type="Texture2D" uid="uid://caj05cpjgwemx" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/jump.png" id="5_utydl"]
+[ext_resource type="Texture2D" uid="uid://cvfxn45bmov12" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/mid airF.png" id="6_1qpea"]
+[ext_resource type="Texture2D" uid="uid://dnpktlhgwyy2u" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/runF.png" id="7_luis0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vu3fi"]
 texture = ExtResource("1_aajq6")
@@ -3067,13 +3071,40 @@ sources/0 = SubResource("TileSetAtlasSource_n8t5u")
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_ju3u1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_3pn5o")
+"texture": ExtResource("4_614ld")
 }],
 "loop": true,
-"name": &"Walk",
+"name": &"Fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_m1vsr")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_utydl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1qpea")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_utydl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_luis0")
+}],
+"loop": true,
+"name": &"WalkF",
 "speed": 5.0
 }]
 
@@ -3115,6 +3146,6 @@ limit_bottom = 174
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_d82c5")
-animation = &"Walk"
+animation = &"Idle"
 
 [node name="HUD" parent="." instance=ExtResource("5_34rhp")]
