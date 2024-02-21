@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_3xli8"]
 [ext_resource type="Texture2D" uid="uid://cb6r7rb2ic7vg" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/landingF.png" id="4_614ld"]
 [ext_resource type="Texture2D" uid="uid://dsj5sxmrat1up" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Chacter with outline/sprites/jump outline.png" id="4_ju3u1"]
-[ext_resource type="PackedScene" path="res://hud.tscn" id="5_34rhp"]
+[ext_resource type="PackedScene" uid="uid://c35ogffmjt4s2" path="res://hud.tscn" id="5_34rhp"]
 [ext_resource type="Texture2D" uid="uid://dm5mc647uiwu0" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/idle.png" id="5_m1vsr"]
 [ext_resource type="Texture2D" uid="uid://caj05cpjgwemx" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/jump.png" id="5_utydl"]
 [ext_resource type="Texture2D" uid="uid://cvfxn45bmov12" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/mid airF.png" id="6_1qpea"]

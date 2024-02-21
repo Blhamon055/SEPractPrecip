@@ -43,6 +43,7 @@ func _physics_process(delta):
 				$AnimatedSprite2D.play("Jump")
 			if Input.is_action_just_released("ui_up"):
 				$AnimatedSprite2D.stop()
+	
 
 	if !Input.is_anything_pressed():
 		$AnimatedSprite2D.play("Idle")
