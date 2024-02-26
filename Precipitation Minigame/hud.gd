@@ -1,11 +1,12 @@
 extends CanvasLayer
 
 var rng = RandomNumberGenerator.new()
-var my_rnd_num = rng.randi_range(1,2)
+var my_rnd_num = rng.randi_range(0,1)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_process_input(true)
+	print(my_rnd_num)
 
 
 
