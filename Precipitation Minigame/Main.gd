@@ -1,5 +1,8 @@
 extends Node2D
-var chemEq = {"1": ["Cl- K+","AgBr,MgCO3,Hg2(NO3)2"]}
+var chemSo = ["Cl-,K+", "C2042-,Na+,Na+"]
+var chemCo = ["AgBr,MgCO3,Hg2(NO3)2", "CaSO4,CaCL2,KCl"]
+var chemAws = ["Hg2(NO3)2", "CaCl2"]
+
 
 
 # Called when the node enters the scene tree for the first time.
