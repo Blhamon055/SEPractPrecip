@@ -1,7 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://bhqja1j74crl5"]
+[gd_scene load_steps=23 format=3 uid="uid://bhqja1j74crl5"]
 
 [ext_resource type="Texture2D" uid="uid://bgdqdv2pqkgv" path="res://Assets/Legacy_Adventure_Pack/Assets/Assets.png" id="1_aajq6"]
-[ext_resource type="Script" path="res://Main.gd" id="1_y8onb"]
 [ext_resource type="Texture2D" uid="uid://34t2xt0i6esp" path="res://IMG_0965.png" id="2_0ldbp"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_3xli8"]
 [ext_resource type="Texture2D" uid="uid://cb6r7rb2ic7vg" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/landingF.png" id="4_614ld"]
@@ -3159,7 +3158,6 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_y8onb")
 
 [node name="Background" type="TileMap" parent="."]
 light_mask = 2
