@@ -14,7 +14,6 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 	if(event is InputEventMouseButton):
 		if(event.button_index == MOUSE_BUTTON_LEFT and event.pressed):
 			if(_rng_selector(shape_idx) == true):
-				
 				print("clicked the right box")
 			else:
 				print("clicked wrong box")
