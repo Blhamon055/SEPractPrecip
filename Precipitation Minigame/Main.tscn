@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bhqja1j74crl5"]
+[gd_scene load_steps=27 format=3 uid="uid://bhqja1j74crl5"]
 
 [ext_resource type="Texture2D" uid="uid://bgdqdv2pqkgv" path="res://Assets/Legacy_Adventure_Pack/Assets/Assets.png" id="1_aajq6"]
 [ext_resource type="Script" path="res://Main.gd" id="1_y8onb"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_3xli8"]
 [ext_resource type="Texture2D" uid="uid://cb6r7rb2ic7vg" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/landingF.png" id="4_614ld"]
 [ext_resource type="Texture2D" uid="uid://dsj5sxmrat1up" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Chacter with outline/sprites/jump outline.png" id="4_ju3u1"]
+[ext_resource type="Script" path="res://Bridge.gd" id="4_wnsc1"]
 [ext_resource type="PackedScene" uid="uid://bb5illnlkk5id" path="res://hud.tscn" id="5_34rhp"]
 [ext_resource type="Texture2D" uid="uid://dm5mc647uiwu0" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/idle.png" id="5_m1vsr"]
 [ext_resource type="Texture2D" uid="uid://caj05cpjgwemx" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/jump.png" id="5_utydl"]
@@ -2071,50 +2072,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_x6xui")
 sources/1 = SubResource("TileSetAtlasSource_ic6ig")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2h8qf"]
-size = Vector2(20, 27)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_d82c5"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_614ld")
-}],
-"loop": true,
-"name": &"Fall",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_m1vsr")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_utydl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_1qpea")
-}],
-"loop": true,
-"name": &"Jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_utydl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_luis0")
-}],
-"loop": true,
-"name": &"WalkF",
-"speed": 5.0
-}]
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7ggt"]
 texture = ExtResource("1_aajq6")
 2:0/0 = 0
@@ -3128,6 +3085,50 @@ texture = ExtResource("1_aajq6")
 [sub_resource type="TileSet" id="TileSet_o33bi"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_q7ggt")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2h8qf"]
+size = Vector2(20, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d82c5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_614ld")
+}],
+"loop": true,
+"name": &"Fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_m1vsr")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_utydl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1qpea")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_utydl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_luis0")
+}],
+"loop": true,
+"name": &"WalkF",
+"speed": 5.0
+}]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6ll0r"]
 
@@ -4189,6 +4190,13 @@ tile_set = SubResource("TileSet_sxmud")
 format = 2
 layer_0/tile_data = PackedInt32Array(589838, 1376256, 16, 655374, 1376256, 16, 589835, 1376256, 16, 655371, 1376256, 16, 589832, 1376256, 16, 655368, 1376256, 16, 589829, 1376256, 16, 655365, 1376256, 16, 262147, 1245184, 3, 262146, 1179648, 3, 262145, 1114112, 3, 196609, 1114112, 3, 131073, 1114112, 3, 65537, 1114112, 6, 1, 1114112, 3, 196610, 1179648, 3, 131074, 1179648, 3, 65538, 1179648, 3, 2, 1179648, 3, 196611, 1245184, 3, 131075, 1245184, 3, -65535, 1114112, 3, -65534, 1179648, 3, -131070, 1179648, 3, -65533, 1245184, 3, -131069, 1245184, 3, -196606, 1048576, 11, -196604, 1114112, 12, -262142, 1048576, 11, -262141, 1048576, 11, -327677, 1048576, 11, -327678, 1048576, 11, -327679, 1048576, 11, -196603, 1179648, 12, -262139, 1179648, 11, -327675, 1179648, 11, -393211, 1179648, 10, -393212, 1114112, 10, -458748, 1114112, 9, -458749, 1048576, 9, -458750, 983040, 9, -393214, 983040, 10, -393215, 917504, 10, -262140, 1048576, 11, -327676, 1048576, 11, -393213, 1048576, 11, 327673, 1310720, 3, 262137, 1310720, 2, 196601, 1310720, 1, 131065, 1114112, 5, 65529, 1114112, 5, -7, 1114112, 5, -65543, 1179648, 4, 327671, 0, 11, 262135, 0, 11, 196599, 0, 11, 131063, 0, 11, 65527, 0, 11, -9, 0, 11, -65545, 0, 11, -131081, 0, 11, -327687, 1179648, 5, -262151, 1179648, 5, -196615, 1179648, 5, -131079, 1179648, 5, 458757, 1179648, 16, 524293, 1179648, 16, 458760, 1179648, 16, 524296, 1179648, 16, 524299, 1179648, 16, 458763, 1179648, 16, 524302, 1179648, 16, 458766, 1179648, 16, 524303, 1, 0, 589839, 1, 0, 655375, 1, 0, 524292, 1, 0, 589828, 1, 0, 655364, 1, 0, 458767, 917504, 2, 458756, 917504, 2, -393223, 1179648, 6, -458759, 1179648, 6, -524295, 1179648, 6, -589831, 1179648, 6, -655367, 1179648, 6, -720903, 1179648, 6, -786439, 1179648, 6, -851975, 1179648, 6, -917511, 1179648, 6, -131071, 1114112, 5, -196607, 1114112, 3, 3, 1245184, 5, 4, 1310720, 5, 5, 1376256, 5, 6, 1441792, 5, 65539, 1245184, 6, 65536, 1048576, 6, 131071, 1048576, 6, 131070, 983040, 6, 327695, 1245184, 14, 327684, 1245184, 14, -5, 1441792, 3, 65531, 1441792, 3, 131067, 1441792, 3, 196603, 1441792, 3, 262139, 1441792, 3, 327675, 1441792, 3, 327674, 1376256, 3, 262138, 1376256, 2, 196602, 1376256, 1, 327672, 1114112, 5, 262136, 1114112, 5, 196600, 1114112, 5, 131064, 1114112, 5, 65528, 1114112, 5, -8, 1114112, 5, 131066, 1179648, 4, 65530, 1179648, 4, -6, 1179648, 4)
 
+[node name="Bridge" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_o33bi")
+collision_visibility_mode = 1
+format = 2
+layer_0/tile_data = PackedInt32Array(327688, 1048576, 16, 327691, 1048576, 16, 327689, 1245184, 14, 327690, 1245184, 14)
+script = ExtResource("4_wnsc1")
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(-96, 63)
 script = ExtResource("2_3xli8")
@@ -4211,12 +4219,6 @@ limit_bottom = 174
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_d82c5")
 animation = &"Idle"
-
-[node name="Bridge" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_o33bi")
-collision_visibility_mode = 1
-format = 2
-layer_0/tile_data = PackedInt32Array(327688, 1048576, 16, 327691, 1048576, 16, 327689, 1245184, 14, 327690, 1245184, 14)
 
 [node name="Foreground" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_nn32p")
