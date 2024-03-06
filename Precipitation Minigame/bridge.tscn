@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://c56biyuwaqj2l"]
-
-[node name="Bridge" type="Area2D"]
-metadata/_edit_group_ = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -16,8 +16,10 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 			if(_rng_selector(shape_idx) == true):
 				get_node("/root/Main/Bridge").hide()
 				print("clicked the right box")
+				GlobalVariables.hudClicked = true
 			else:
 				print("clicked wrong box")
+				GlobalVariables.hudClicked = false
 
 
 func _rng_selector(x):

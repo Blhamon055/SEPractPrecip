@@ -23,3 +23,7 @@ func _process(delta):
 
 func _random(num):
 	var my_rnd_num = rng.randi_range(0,num)
+
+func _input(event):
+	if(GlobalVariables.hudClicked == true):
+		$BridgeHitbox/CollisionShape2D.disabled = true
