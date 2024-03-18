@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 150.0
+var SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -36,6 +36,7 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 
 	# Handle Jump.
+	"""
 	if Input.is_action_just_pressed("ui_up"):
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
@@ -43,6 +44,7 @@ func _physics_process(delta):
 				$AnimatedSprite2D.play("Jump")
 			if Input.is_action_just_released("ui_up"):
 				$AnimatedSprite2D.stop()
+	"""
 	
 
 	if !Input.is_anything_pressed():
@@ -62,3 +64,11 @@ func _physics_process(delta):
 	if Input.is_action_just_released("ui_left"):
 		$AnimatedSprite2D.stop()
 	move_and_slide()
+
+
+func _on_bridge_hitbox_body_entered(body):
+	SPEED = 0
+
+
+func _on_bridge_hitbox_body_exited(body):
+	gravity = 1000
