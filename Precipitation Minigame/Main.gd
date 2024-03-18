@@ -25,5 +25,7 @@ func _random(num):
 	var my_rnd_num = rng.randi_range(0,num)
 
 func _input(event):
-	if(GlobalVariables.hudClicked == true):
+	if(GlobalVariables.hudClickedIncorrect == true):
+		$BridgeHitbox/CollisionShape2D.disabled = true
+	elif(GlobalVariables.hudClickedCorrect == true):
 		$BridgeHitbox/CollisionShape2D.disabled = true

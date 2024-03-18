@@ -1,3 +1,4 @@
 extends Node
 
-var hudClicked = false
+var hudClickedCorrect = false
+var hudClickedIncorrect = false

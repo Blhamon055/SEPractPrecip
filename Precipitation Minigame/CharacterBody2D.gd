@@ -71,4 +71,8 @@ func _on_bridge_hitbox_body_entered(body):
 
 
 func _on_bridge_hitbox_body_exited(body):
-	gravity = 1000
+	if(GlobalVariables.hudClickedCorrect == true):
+		gravity = 0
+		SPEED = 150.0
+	else:
+		gravity = 1000
