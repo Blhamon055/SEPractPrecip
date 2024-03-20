@@ -13,13 +13,13 @@ func _ready():
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if(event is InputEventMouseButton):
 		if(event.button_index == MOUSE_BUTTON_LEFT and event.pressed):
-			if(_rng_selector(shape_idx) == true):
+			if(_rng_selector(shape_idx) == false):
 				get_node("/root/Main/Bridge").hide()
-				print("clicked the right box")
+				print("clicked wrong box")
 				GlobalVariables.hudClickedIncorrect = true
 				GlobalVariables.hudClickedCorrect = false
 			else:
-				print("clicked wrong box")
+				print("clicked right box")
 				GlobalVariables.hudClickedIncorrect = false
 				GlobalVariables.hudClickedCorrect = true
 
