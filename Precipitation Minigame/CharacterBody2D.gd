@@ -70,6 +70,7 @@ func _on_bridge_hitbox_body_entered(body):
 	SPEED = 0
 	get_node("/root/Main/HUD").show()
 	get_node("/root/Main")._selectProb()
+	print("testing")
 
 
 func _on_bridge_hitbox_body_exited(body):

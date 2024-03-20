@@ -4233,7 +4233,7 @@ offset = Vector2(0, -10)
 zoom = Vector2(3.5, 3.5)
 limit_left = -128
 limit_top = -100
-limit_right = 430
+limit_right = 420
 limit_bottom = 174
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]

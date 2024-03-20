@@ -23,6 +23,8 @@ func _ready():
 	print(numbers)
 	$CharacterBody2D.position.x = -96
 	$CharacterBody2D.position.y = 63
+	GlobalVariables.hudClickedCorrect = false
+	GlobalVariables.hudClickedIncorrect = false
 
 
 func _rng_selector(x):
@@ -52,4 +54,9 @@ func _input(event):
 
 
 func _on_change_scene_body_entered(body):
-	get_tree().change_scene_to_file("res://Main.tscn")
+	$CharacterBody2D.position.x = -96
+	$CharacterBody2D.position.y = 63
+	
+	GlobalVariables.hudClickedCorrect = false
+	GlobalVariables.hudClickedIncorrect = false
+	$BridgeHitbox/CollisionShape2D.disabled = false
