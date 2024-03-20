@@ -69,6 +69,7 @@ func _physics_process(delta):
 func _on_bridge_hitbox_body_entered(body):
 	SPEED = 0
 	get_node("/root/Main/HUD").show()
+	get_node("/root/Main")._selectProb()
 
 
 func _on_bridge_hitbox_body_exited(body):
