@@ -42,6 +42,7 @@ func _selectProb():
 	numbers.pop_front()
 	var compoundChoices = chemCo[problem].split(",", true,4)
 	print(compoundChoices)
+	print(numbers)
 
 func _input(event):
 	if(GlobalVariables.hudClickedIncorrect == true):
