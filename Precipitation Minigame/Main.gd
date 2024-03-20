@@ -17,6 +17,8 @@ func _ready():
 	randomize()
 	numbers.shuffle()
 	print(numbers)
+	$CharacterBody2D.position.x = -96
+	$CharacterBody2D.position.y = 63
 	
 
 
@@ -35,3 +37,7 @@ func _input(event):
 		$BridgeHitbox/CollisionShape2D.disabled = true
 	elif(GlobalVariables.hudClickedCorrect == true):
 		$BridgeHitbox/CollisionShape2D.disabled = true
+
+
+func _on_change_scene_body_entered(body):
+	get_tree().change_scene_to_file("res://Main.tscn")

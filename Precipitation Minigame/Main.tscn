@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bhqja1j74crl5"]
+[gd_scene load_steps=30 format=3 uid="uid://bhqja1j74crl5"]
 
 [ext_resource type="Texture2D" uid="uid://bgdqdv2pqkgv" path="res://Assets/Legacy_Adventure_Pack/Assets/Assets.png" id="1_aajq6"]
 [ext_resource type="Script" path="res://Main.gd" id="1_y8onb"]
@@ -4188,6 +4188,9 @@ sources/1 = SubResource("TileSetAtlasSource_8oqib")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y67qk"]
 size = Vector2(11, 80)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvaqc"]
+size = Vector2(20, 67)
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_y8onb")
 
@@ -4253,5 +4256,13 @@ position = Vector2(170, 67)
 shape = SubResource("RectangleShape2D_y67qk")
 script = ExtResource("12_kwjas")
 
+[node name="ChangeScene" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeScene"]
+position = Vector2(414, 61)
+shape = SubResource("RectangleShape2D_yvaqc")
+
 [connection signal="body_entered" from="BridgeHitbox" to="CharacterBody2D" method="_on_bridge_hitbox_body_entered"]
 [connection signal="body_exited" from="BridgeHitbox" to="CharacterBody2D" method="_on_bridge_hitbox_body_exited"]
+[connection signal="body_entered" from="ChangeScene" to="." method="_on_change_scene_body_entered"]
