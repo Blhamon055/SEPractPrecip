@@ -9,6 +9,9 @@ var count = 16
 var lvlCount = 16
 
 
+var rng = RandomNumberGenerator.new()
+var my_rnd_num = rng.randi_range(0,1)
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,7 +19,15 @@ func _ready():
 	$HUD.hide()
 	randomize()
 	numbers.shuffle()
+	print(my_rnd_num)
 	print(numbers)
+
+
+func _rng_selector(x):
+	if(x == my_rnd_num):
+		return true
+	else:
+		return false
 	
 
 
