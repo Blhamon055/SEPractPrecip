@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bhqja1j74crl5"]
+[gd_scene load_steps=31 format=3 uid="uid://bhqja1j74crl5"]
 
 [ext_resource type="Texture2D" uid="uid://bgdqdv2pqkgv" path="res://Assets/Legacy_Adventure_Pack/Assets/Assets.png" id="1_aajq6"]
 [ext_resource type="Script" path="res://Main.gd" id="1_y8onb"]
@@ -4191,6 +4191,9 @@ size = Vector2(11, 80)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yvaqc"]
 size = Vector2(20, 67)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_on0hx"]
+size = Vector2(282, 21)
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_y8onb")
 
@@ -4264,6 +4267,13 @@ collision_layer = 4
 position = Vector2(414, 61)
 shape = SubResource("RectangleShape2D_yvaqc")
 
+[node name="WaterHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterHitbox"]
+position = Vector2(170, 286)
+shape = SubResource("RectangleShape2D_on0hx")
+
 [connection signal="body_entered" from="BridgeHitbox" to="CharacterBody2D" method="_on_bridge_hitbox_body_entered"]
 [connection signal="body_exited" from="BridgeHitbox" to="CharacterBody2D" method="_on_bridge_hitbox_body_exited"]
 [connection signal="body_entered" from="ChangeScene" to="." method="_on_change_scene_body_entered"]
+[connection signal="body_entered" from="WaterHitbox" to="." method="_on_water_hitbox_body_entered"]
