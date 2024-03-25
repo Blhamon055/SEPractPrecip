@@ -39,6 +39,7 @@ func _process(delta):
 	
 func _selectProb():
 	var problem = numbers[0]
+	print(problem)
 	var answer = chemAws[numbers[0]]
 	numbers.pop_front()
 	var compoundChoices = chemCo[problem].split(",", true,4)
