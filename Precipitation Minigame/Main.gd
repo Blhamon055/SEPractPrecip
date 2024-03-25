@@ -73,6 +73,10 @@ func _on_change_scene_body_entered(body):
 func _on_water_hitbox_body_entered(body):
 	$CharacterBody2D.position.x = -96
 	$CharacterBody2D.position.y = 63
+	$CharacterBody2D.SPEED = 150.0
+	$CharacterBody2D.gravity = 0
+	
+	$Bridge.show()
 	
 	GlobalVariables.hudClickedCorrect = false
 	GlobalVariables.hudClickedIncorrect = false
