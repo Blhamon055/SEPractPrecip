@@ -4229,12 +4229,13 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_ju3u1")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-offset = Vector2(0, -10)
+offset = Vector2(5, -10)
 zoom = Vector2(3.5, 3.5)
-limit_left = -128
+limit_left = -121
 limit_top = -100
 limit_right = 420
 limit_bottom = 174
+limit_smoothed = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_d82c5")
