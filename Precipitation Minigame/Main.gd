@@ -11,7 +11,7 @@ var lvlCount = 16
 
 
 var rng = RandomNumberGenerator.new()
-var my_rnd_num = rng.randi_range(0,1)
+var my_rnd_num = rng.randi_range(0,3)
 
 
 
@@ -20,7 +20,6 @@ func _ready():
 	$HUD.hide()
 	randomize()
 	numbers.shuffle()
-	print(my_rnd_num)
 	print(numbers)
 	$CharacterBody2D.position.x = -96
 	$CharacterBody2D.position.y = 63
@@ -41,6 +40,8 @@ func _process(delta):
 	pass
 	
 func _selectProb():
+	my_rnd_num = rng.randi_range(0,3)
+	print(my_rnd_num)
 	var problem = numbers[0]
 	var answer = chemAws[numbers[0]]
 	numbers.pop_front()
