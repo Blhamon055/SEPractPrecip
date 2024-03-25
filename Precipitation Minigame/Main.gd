@@ -51,9 +51,11 @@ func _selectProb():
 
 func _input(event):
 	if(GlobalVariables.hudClickedIncorrect == true):
-		$BridgeHitbox/CollisionShape2D.disabled = true
+		$CharacterBody2D.set_collision_mask_value(3, false)
+		$BridgeHitbox.set_collision_mask_value(1, false)
 	elif(GlobalVariables.hudClickedCorrect == true):
-		$BridgeHitbox/CollisionShape2D.disabled = true
+		$CharacterBody2D.set_collision_mask_value(3, false)
+		$BridgeHitbox.set_collision_mask_value(1, false)
 
 
 func _on_change_scene_body_entered(body):
@@ -62,4 +64,5 @@ func _on_change_scene_body_entered(body):
 	
 	GlobalVariables.hudClickedCorrect = false
 	GlobalVariables.hudClickedIncorrect = false
-	$BridgeHitbox/CollisionShape2D.disabled = false
+	$CharacterBody2D.set_collision_mask_value(3, true)
+	$BridgeHitbox.set_collision_mask_value(1, true)
