@@ -9,9 +9,7 @@ var numbers = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 var count = 16
 var lvlCount = 16
 
-
-var rng = RandomNumberGenerator.new()
-var my_rnd_num = rng.randi_range(0,3)
+var idxAws = 0
 
 
 
@@ -28,7 +26,7 @@ func _ready():
 
 
 func _rng_selector(x):
-	if(x == my_rnd_num):
+	if(x == idxAws):
 		return true
 	else:
 		return false
@@ -40,15 +38,17 @@ func _process(delta):
 	pass
 	
 func _selectProb():
-	my_rnd_num = rng.randi_range(0,3)
-	print(my_rnd_num)
 	var problem = numbers[0]
 	var answer = chemAws[numbers[0]]
 	numbers.pop_front()
 	var compoundChoices = chemCo[problem].split(",", true,4)
+	for n in 2:
+		if(compoundChoices.find(chemAws[problem], n)):
+			idxAws = n
 	print(compoundChoices)
 	print(answer)
-	print(numbers)
+	print(idxAws)
+	get_node("/root/Main/HUD")._updateTB(compoundChoices[0],compoundChoices[1],compoundChoices[2])
 
 func _input(event):
 	if(GlobalVariables.hudClickedIncorrect == true):

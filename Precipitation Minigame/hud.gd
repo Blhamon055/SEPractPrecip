@@ -20,3 +20,9 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 				GlobalVariables.hudClickedIncorrect = true
 				GlobalVariables.hudClickedCorrect = false
 
+func _updateTB(solution1, solution2, solution3):
+	$Area2D/Element1/Label1.text = solution1
+	$Area2D/Element2/Label2.text = solution2
+	$Area2D/Element3/Label3.text = solution3
+	$Area2D/Element4/Label4.text = "none"
+	
