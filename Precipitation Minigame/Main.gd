@@ -42,6 +42,7 @@ func _selectProb():
 	print(problem)
 	var answer = chemAws[numbers[0]]
 	numbers.pop_front()
+	$Label.text = (chemSo[problem])
 	var compoundChoices = chemCo[problem].split(",", true,4)
 	for i in 3:
 		if(compoundChoices[i] == answer):
@@ -58,10 +59,12 @@ func _input(event):
 		$CharacterBody2D.set_collision_mask_value(3, false)
 		$BridgeHitbox.set_collision_mask_value(1, false)
 		get_node("/root/Main/HUD")._updateTB("","","","")
+		$Label.text = ("")
 	elif(GlobalVariables.hudClickedCorrect == true):
 		$CharacterBody2D.set_collision_mask_value(3, false)
 		$BridgeHitbox.set_collision_mask_value(1, false)
 		get_node("/root/Main/HUD")._updateTB("","","","")
+		$Label.text = ("")
 
 
 func _on_change_scene_body_entered(body):

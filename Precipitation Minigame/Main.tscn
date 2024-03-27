@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bhqja1j74crl5"]
+[gd_scene load_steps=32 format=3 uid="uid://bhqja1j74crl5"]
 
 [ext_resource type="Texture2D" uid="uid://bgdqdv2pqkgv" path="res://Assets/Legacy_Adventure_Pack/Assets/Assets.png" id="1_aajq6"]
 [ext_resource type="Script" path="res://Main.gd" id="1_y8onb"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cvfxn45bmov12" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/mid airF.png" id="6_1qpea"]
 [ext_resource type="Texture2D" uid="uid://dnpktlhgwyy2u" path="res://Assets/Jungle Asset Pack/Jungle Asset Pack/Character/sprites/runF.png" id="7_luis0"]
 [ext_resource type="Script" path="res://CollisionShape2D.gd" id="12_kwjas"]
+[ext_resource type="FontFile" uid="uid://ooxx6kwicwu1" path="res://Assets/Xolonium-Bold.ttf" id="13_sh08r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vu3fi"]
 texture = ExtResource("1_aajq6")
@@ -4274,6 +4275,13 @@ shape = SubResource("RectangleShape2D_yvaqc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WaterHitbox"]
 position = Vector2(170, 286)
 shape = SubResource("RectangleShape2D_on0hx")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 106.0
+offset_top = 120.0
+offset_right = 228.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("13_sh08r")
 
 [connection signal="body_entered" from="BridgeHitbox" to="CharacterBody2D" method="_on_bridge_hitbox_body_entered"]
 [connection signal="body_exited" from="BridgeHitbox" to="CharacterBody2D" method="_on_bridge_hitbox_body_exited"]
