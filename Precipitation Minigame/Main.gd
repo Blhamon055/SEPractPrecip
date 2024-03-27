@@ -72,6 +72,7 @@ func _on_change_scene_body_entered(body):
 	GlobalVariables.hudClickedIncorrect = false
 	$CharacterBody2D.set_collision_mask_value(3, true)
 	$BridgeHitbox.set_collision_mask_value(1, true)
+	$HUD.hide()
 
 
 func _on_water_hitbox_body_entered(body):
@@ -86,3 +87,4 @@ func _on_water_hitbox_body_entered(body):
 	GlobalVariables.hudClickedIncorrect = false
 	$CharacterBody2D.set_collision_mask_value(3, true)
 	$BridgeHitbox.set_collision_mask_value(1, true)
+	$HUD.hide()
