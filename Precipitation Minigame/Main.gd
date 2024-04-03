@@ -3,11 +3,11 @@ extends Node2D
 
 
 
-var chemSo = ["Cl\u207B,K\u207A", "C\u2082O\u2072\u207B\u2084,Na\u207A,Na\u207A", "K\u207A,F\u207B", "Al3+,Cl\u207B,Cl\u207B,Cl\u207B", "CO2-3,Na\u207A,Na\u207A", "Pb2+,NO-2, NO-2", "Ca2+,Br\u207B,Br\u207B", "K\u207A,NO3-", "Fe3+,Cl\u207B,Cl\u207B,Cl\u207B","Na\u207A,Na\u207A,Na\u207A,PO3-4", "K\u207A, K\u207A, K\u207A, AsO3-4", "Cd2+, SO2-4", "Cr3+, SCN\u207B, SCN\u207B, SCN\u207B", "Li\u207A, ClO-4", "Ag\u207A, NO-3", "K\u207A, K\u207A, CrO2-4", "OH\u207B, PO3-4, Na\u207A, Na\u207A, Na\u207A, Na\u207A", "AsO3-4, OH\u207B, Na\u207A, Na\u207A, Na\u207A, Na\u207A", "Hg2+, ClO-4, ClO-4", "Hg2+2, NO-3, NO-3"]
+var chemSo = ["Cl\u207B,K\u207A", "C\u2082O\u2072\u207B\u2084,Na\u207A,Na\u207A", "K\u207A,F\u207B", "Al3+,Cl\u207B,Cl\u207B,Cl\u207B", "CO2-3,Na\u207A,Na\u207A", "Pb2+,NO-2, NO-2", "Ca2+,Br\u207B,Br\u207B", "K\u207A,NO3-", "Fe3+,Cl\u207B,Cl\u207B,Cl\u207B", "Na\u207A,Na\u207A,Na\u207A,PO3-4", "K\u207A, K\u207A, K\u207A, AsO3-4", "Cd2+, SO2-4", "Cr3+, SCN\u207B, SCN\u207B, SCN\u207B", "Li\u207A, ClO-4", "Ag\u207A, NO-3", "K\u207A, K\u207A, CrO2-4", "OH\u207B, PO3-4, Na\u207A, Na\u207A, Na\u207A, Na\u207A", "AsO3-4, OH\u207B, Na\u207A, Na\u207A, Na\u207A, Na\u207A", "Hg2+, ClO-4, ClO-4", "Hg2+2, NO-3, NO-3"]
 var chemCo = ["AgBr,MgCO\u2083,Hg\u2082(NO\u2083)\u2082", "CaSO\u2084,CaCl\u2082,KCl", "MgSO\u2084,CuS0\u2084,Ca\u2082(PO\u2084)\u2082", "NaOH,Ba\u2083(PO\u2084)\u2082,KClO\u2083", "NH\u2084I,Fe(OH)\u2083,CaO","ZnClO\u2084,Na\u2083PO\u2084,NiS", "K\u2082CO\u2083,MgCl\u2082,NH\u2084C\u2082H\u2083O\u2082", "FeCl\u2083,Al\u2082(SO\u2084)\u2083,Ag\u2082CO\u2083", "KSCN,NaOH,LiC\u2082h\u2083O\u2082", "NH\u2084F,KI,CaCl\u2082", "FeCl\u2083, NaBr, KF", "NaC\u2082H\u2083O\u2082, K\u2082SO\u2084, Na\u2082S", "NaOH, KClO\u2084, Na\u2082SO\u2084", "CuO, AlBr\u2083, Ca(OH)\u2082", "NaCl, KF, Ca(ClO\u2084)\u2082", "KCl, LiBr, BaCl\u2082", "NaOH, Ca(NO\u2083)\u2082, KBr", "CuCl\u2082, KC\u2083H\u2083O\u2082, NaI", "K\u2082S, KBr, NaCl", "Na\u2082CO\u2083, KClO\u2084, LiNO\u2083"]
-var chemAws = ["Hg\u2082(NO\u2083)\u2082", "CaCl\u2082","MgSO\u2084","NaOH","CaO", "Na\u2083PO\u2084", "K\u2082CO\u2083","none", "NaOH", "CaCl\u2082", "NaCl", "BaCl\u2082", "Ca(NO\u2083)\u2082", "CuCl\u2082", "K\u2082S", "Na\u2082CO\u2083"]
+var chemAws = ["Hg\u2082(NO\u2083)\u2082", "CaCl\u2082","MgSO\u2084","NaOH","CaO", "Na\u2083PO\u2084", "K\u2082CO\u2083","none", "NaOH", "CaCl\u2082", "FeCl\u2083", "Na\u2082S", "NaOH", "none", "NaCl", "BaCl\u2082", "Ca(NO\u2083)\u2082", "CuCl\u2082", "K\u2082S", "Na\u2082CO\u2083"]
 
-var numbers = [0,1,2,3,4,5,6,7,8] #9,10,11,12,13,14,15]
+var numbers = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 
 
 var idxAns = 0
