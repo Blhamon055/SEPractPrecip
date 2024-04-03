@@ -60,11 +60,13 @@ func _input(event):
 		$BridgeHitbox.set_collision_mask_value(1, false)
 		get_node("/root/Main/HUD")._updateTB("","","","")
 		$Label.text = ("")
+		GlobalVariables.lives -= 1
 	elif(GlobalVariables.hudClickedCorrect == true):
 		$CharacterBody2D.set_collision_mask_value(3, false)
 		$BridgeHitbox.set_collision_mask_value(1, false)
 		get_node("/root/Main/HUD")._updateTB("","","","")
 		$Label.text = ("")
+		GlobalVariables.score += 1
 
 
 func _on_change_scene_body_entered(body):

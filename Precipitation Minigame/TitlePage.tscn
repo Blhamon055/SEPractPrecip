@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cfmmwquvoohbs"]
+
+[node name="TitlePage" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 643.0
+offset_bottom = 374.0
