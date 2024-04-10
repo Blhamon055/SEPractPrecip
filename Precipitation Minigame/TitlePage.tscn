@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfmmwquvoohbs"]
+[gd_scene load_steps=3 format=3 uid="uid://cfmmwquvoohbs"]
+
+[ext_resource type="Script" path="res://TitlePage.gd" id="1_gdyma"]
 
 [sub_resource type="Theme" id="Theme_rljt8"]
 
 [node name="TitlePage" type="Node2D"]
+script = ExtResource("1_gdyma")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(320, 192)
@@ -25,7 +28,7 @@ size_flags_horizontal = 0
 text = "Welcome to the Precipitation Game!
 "
 
-[node name="Button" type="Button" parent="Camera2D"]
+[node name="startGameBTN" type="Button" parent="Camera2D"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -40,3 +43,5 @@ grow_vertical = 2
 theme = SubResource("Theme_rljt8")
 theme_override_colors/icon_normal_color = Color(0.0588235, 0.639216, 0.317647, 1)
 text = "Press Start to Play!"
+
+[connection signal="pressed" from="Camera2D/startGameBTN" to="." method="_on_start_game_btn_pressed"]
