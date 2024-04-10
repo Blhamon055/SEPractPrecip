@@ -11,6 +11,27 @@ script = ExtResource("1_urxde")
 
 [node name="Area2D" type="Area2D" parent="."]
 
+[node name="Score" type="Label" parent="Area2D"]
+offset_left = 1061.0
+offset_top = 114.0
+offset_right = 1281.0
+offset_bottom = 227.0
+theme_override_fonts/font = ExtResource("2_qrutn")
+theme_override_font_sizes/font_size = 35
+text = "Score"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Lives" type="Label" parent="Area2D"]
+offset_left = 1062.0
+offset_right = 1282.0
+offset_bottom = 113.0
+theme_override_fonts/font = ExtResource("2_qrutn")
+theme_override_font_sizes/font_size = 35
+text = "Lives"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Element1" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(120, 109.5)
 scale = Vector2(5, 4)

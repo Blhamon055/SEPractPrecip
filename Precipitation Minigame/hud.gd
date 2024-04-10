@@ -28,3 +28,9 @@ func _updateTB(solution1, solution2, solution3, none):
 	$Area2D/Element3/Label3.text = solution3
 	$Area2D/Element4/Label4.text = none
 	
+
+func _updateScore(score):
+	$Area2D/Score.text = "Score: " + str(score)
+
+func _updateLives(lives):
+	$Area2D/Lives.text = "Lives: " +  str(lives)

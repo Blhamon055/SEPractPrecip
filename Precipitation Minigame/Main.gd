@@ -68,18 +68,19 @@ func _input(event):
 		$BridgeHitbox.set_collision_mask_value(1, false)
 		get_node("/root/Main/HUD")._updateTB("","","","")
 		$Label.text = ("")
-		GlobalVariables.score += 1
 
 
 func _on_change_scene_body_entered(body):
 	$CharacterBody2D.position.x = -96
 	$CharacterBody2D.position.y = 63
+	GlobalVariables.score += 1
 	
 	GlobalVariables.hudClickedCorrect = false
 	GlobalVariables.hudClickedIncorrect = false
 	$CharacterBody2D.set_collision_mask_value(3, true)
 	$BridgeHitbox.set_collision_mask_value(1, true)
 	$HUD.hide()
+	get_node("/root/Main/HUD")._updateScore(GlobalVariables.score)
 
 
 func _on_water_hitbox_body_entered(body):
@@ -95,6 +96,7 @@ func _on_water_hitbox_body_entered(body):
 	$CharacterBody2D.set_collision_mask_value(3, true)
 	$BridgeHitbox.set_collision_mask_value(1, true)
 	GlobalVariables.lives -= 1
+	get_node("/root/Main/HUD")._updateLives(GlobalVariables.lives)
 	if(GlobalVariables.lives == 0):
 		_gameOver()
 		GlobalVariables.lives = 3
