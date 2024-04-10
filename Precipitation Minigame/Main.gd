@@ -44,6 +44,8 @@ func _selectProb():
 	numbers.pop_front()
 	$Label.text = (chemSo[problem])
 	var compoundChoices = chemCo[problem].split(",", true,4)
+	if(numbers.is_empty()):
+		_gameOver()
 	for i in 3:
 		if(compoundChoices[i] == answer):
 			idxAns = i
@@ -61,6 +63,8 @@ func _input(event):
 		get_node("/root/Main/HUD")._updateTB("","","","")
 		$Label.text = ("")
 		GlobalVariables.lives -= 1
+		if(lives == 0):
+			_gameOver()
 	elif(GlobalVariables.hudClickedCorrect == true):
 		$CharacterBody2D.set_collision_mask_value(3, false)
 		$BridgeHitbox.set_collision_mask_value(1, false)
@@ -93,3 +97,6 @@ func _on_water_hitbox_body_entered(body):
 	$CharacterBody2D.set_collision_mask_value(3, true)
 	$BridgeHitbox.set_collision_mask_value(1, true)
 	$HUD.hide()
+
+func _gameOver():
+	
