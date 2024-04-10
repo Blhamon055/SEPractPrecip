@@ -23,6 +23,7 @@ func _ready():
 	$CharacterBody2D.position.y = 63
 	GlobalVariables.hudClickedCorrect = false
 	GlobalVariables.hudClickedIncorrect = false
+	GlobalVariables.lives = 3
 
 
 func _rng_selector(x):
@@ -42,10 +43,10 @@ func _selectProb():
 	print(problem)
 	var answer = chemAws[numbers[0]]
 	numbers.pop_front()
-	$Label.text = (chemSo[problem])
-	var compoundChoices = chemCo[problem].split(",", true,4)
 	if(numbers.is_empty()):
 		_gameOver()
+	$Label.text = (chemSo[problem])
+	var compoundChoices = chemCo[problem].split(",", true,4)
 	for i in 3:
 		if(compoundChoices[i] == answer):
 			idxAns = i
@@ -62,9 +63,6 @@ func _input(event):
 		$BridgeHitbox.set_collision_mask_value(1, false)
 		get_node("/root/Main/HUD")._updateTB("","","","")
 		$Label.text = ("")
-		GlobalVariables.lives -= 1
-		if(lives == 0):
-			_gameOver()
 	elif(GlobalVariables.hudClickedCorrect == true):
 		$CharacterBody2D.set_collision_mask_value(3, false)
 		$BridgeHitbox.set_collision_mask_value(1, false)
@@ -96,7 +94,11 @@ func _on_water_hitbox_body_entered(body):
 	GlobalVariables.hudClickedIncorrect = false
 	$CharacterBody2D.set_collision_mask_value(3, true)
 	$BridgeHitbox.set_collision_mask_value(1, true)
+	GlobalVariables.lives -= 1
+	if(GlobalVariables.lives == 0):
+		_gameOver()
+		GlobalVariables.lives = 3
 	$HUD.hide()
 
 func _gameOver():
-	
+	get_tree().change_scene_to_file("res://TitlePage.tscn")
