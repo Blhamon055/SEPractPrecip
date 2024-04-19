@@ -106,4 +106,4 @@ func _on_water_hitbox_body_entered(body):
 	$HUD.hide()
 
 func _gameOver():
-	get_tree().change_scene_to_file("res://TitlePage.tscn")
+	get_tree().change_scene_to_file("res://EndingPage.tscn")

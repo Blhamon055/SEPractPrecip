@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://csak2htlot2co"]
+
+[ext_resource type="Script" path="res://EndingPage.gd" id="1_ax60l"]
+[ext_resource type="FontFile" uid="uid://ooxx6kwicwu1" path="res://Assets/Xolonium-Bold.ttf" id="1_mv5e7"]
+
+[sub_resource type="Theme" id="Theme_i8opr"]
+
+[node name="EndingPage" type="Node2D"]
+script = ExtResource("1_ax60l")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(320, 192)
+zoom = Vector2(2, 2)
+
+[node name="Panel" type="Panel" parent="Camera2D"]
+modulate = Color(0.235294, 0.137255, 1, 1)
+offset_left = -677.0
+offset_top = -350.0
+offset_right = 603.0
+offset_bottom = 370.0
+
+[node name="Label" type="Label" parent="Camera2D"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -157.5
+offset_top = -100.0
+offset_right = 157.5
+offset_bottom = -77.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_mv5e7")
+text = "Welcome to the Precipitation Game!
+"
+
+[node name="RestartGameBTN" type="Button" parent="Camera2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.0
+offset_right = 103.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_i8opr")
+theme_override_colors/icon_normal_color = Color(0.0588235, 0.639216, 0.317647, 1)
+theme_override_fonts/font = ExtResource("1_mv5e7")
+text = "Press to Restart Game"
+
+[node name="TitleScreenBTN" type="Button" parent="Camera2D"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -140.0
+offset_top = 75.0
+offset_right = 140.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_i8opr")
+theme_override_colors/icon_normal_color = Color(0.0588235, 0.639216, 0.317647, 1)
+theme_override_fonts/font = ExtResource("1_mv5e7")
+text = "Press to Return to Title Screen"
+
+[connection signal="pressed" from="Camera2D/RestartGameBTN" to="." method="_on_restart_game_btn_pressed"]
+[connection signal="pressed" from="Camera2D/TitleScreenBTN" to="." method="_on_title_screen_btn_pressed"]
